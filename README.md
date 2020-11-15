@@ -125,9 +125,10 @@
 - Jalankan ```cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/penanjakan.semerue08.pw.conf```
 - Konfigurasi file tersebut hingga seperti yang di bawah ini lalu simpan
 - ![foto 10b](img/10b.png)
-- Jalankan ```a2ensite penanjakan.semerue08.pw.conf``` dan ```service apache2 restart```
 - ![foto 10c](img/10c.png)
+- Jalankan ```a2ensite penanjakan.semerue08.pw.conf``` dan ```service apache2 restart```
 - ![foto 10d](img/10d.png)
+- ![foto 10e](img/10e.png)
 
 ## 11. Pada folder /public dibolehkan directory listing namun untuk folder yang berada di dalamnya tidak dibolehkan.
 - Jalankan ```nano /etc/apache2/sites-available/penanjakan.semerue08.pw.conf```
