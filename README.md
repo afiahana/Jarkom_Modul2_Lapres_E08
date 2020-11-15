@@ -56,9 +56,8 @@
 - Pada UML Mojokerto jalankan ```service bind9 restart```
 - Pada UML Gresik dan Sidoarjo (client), buka file ```nano /etc/resolv.conf```
 - Masukkan IP Mojokerto lalu save
-- ![foto 5c](img/5c.png)
 - Berhasil ketika UML Gresik dan/atau Sidoarjo berhasil ping ```ping semerue08.pw```
-- ![foto 45d](img/5d.png)
+- ![foto 5c](img/5c.png)
 
 ## 6. Meminta dibuatkan (6) subdomain dengan alamat http://gunung.semeruyyy.pw yang didelegasikan pada server MOJOKERTO dan mengarah ke IP Server PROBOLINGGO.
 - Pada UML Malang buka file ```nano /etc/bind/semeru/semerue08.pw```
