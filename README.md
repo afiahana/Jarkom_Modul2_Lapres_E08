@@ -154,3 +154,46 @@
 - ![foto 13a](img/13a.png)
 - Jalankan ```service apache2 restart```
 - ![foto 13b](img/13b.png)
+
+## 14. Untuk web http://gunung.semeruyyy.pw belum dapat dikonfigurasi pada web server karena menunggu pengerjaan website selesai.sedangkan web http://naik.gunung.semeruyyy.pw sudah bisa diakses hanya dengan menggunakan port 8888. DocumentRoot web berada pada /var/www/naik.gunung.semeruyyy.pw. Dikarenakan web http://naik.gunung.semeruyyy.pw bersifat private
+- Masuk ke directory /var/www dengan menjalankan ```cd /var/www```
+- Jalankan ```wget 10.151.36.202/naik.gunung.semeru.pw.zip```
+- Unzip dan rename folder hasil unzip menjadi ```naik.gunung.semerue08.pw```
+- Masuk ke directory ```/etc/apache2/sites-available``` dengan menjalankan ```cd /etc/apache2/sites-available```
+- Jalankan ```cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/naik.gunung.semerue08.pw.conf```
+- Konfigurasi file tersebut seperti gambar di bawah ini lalu simpan
+- ![foto 14a](img/14a.png)
+- Tambahkan port 8888 pada ports.conf dengan menjalankan ```nano /etc/apache2/ports.conf```
+- Konfigurasi file tersebut seperti gambar di bawah ini lalu simpan
+- ![foto 14b](img/14b.png)
+- Jalankan ```a2ensite naik.gunung.semerue08.pw``` lalu ```service apache2 restart```
+- ![foto 14c](img/14c.png)
+
+## 15. Bibah meminta kamu membuat web http://naik.gunung.semeruyyy.pw agar diberi autentikasi password dengan username “semeru” dan password “kuynaikgunung” supaya aman dan tidak sembarang orang bisa mengaksesnya. Saat Bibah mengunjungi IP PROBOLINGGO, yang muncul bukan web utama http://semeruyyy.pw melainkan laman default Apache yang bertuliskan “It works!”.
+- Masuk ke directory “/etc/apache2” dengan menjalankan “cd /etc/apache2”
+- Jalankan “htpasswd -c /etc/apache2/.htpasswd semeru” untuk menambahkan user “semeru”
+- Isi password dengan “kuynaikgunung”
+- Masuk ke directory “/etc/apache2/sites-available” dengan menjalankan “cd /etc/apache2/sites-available”
+- Jalankan “nano naik.gunung.semerue08.pw.conf”
+- Konfigurasi file tersebut seperti gambar di bawah ini lalu simpan
+- ![foto 15a](img/15a.png)
+- Buka http://naik.gunung.semerue08.pw:8888/ di browser
+- ![foto 15b](img/15b.png)
+
+## 16. Karena dirasa kurang profesional, maka setiap Bibah mengunjungi IP PROBOLINGGO akan dialihkan secara otomatis ke http://semeruyyy.pw.
+- Masuk ke directory ```/etc/apache2/sites-available``` dengan menjalankan ```cd /etc/apache2/sites-available```
+- Jalankan ```nano  000-default.conf```
+- Konfigurasi file tersebut seperti gambar di bawah ini lalu simpan
+- ![foto 16a](img/16a.png)
+- Jalankan ```service apache2 restart```
+- Buka 10.151.71.76 di browser
+- ![foto 16b](img/16b.png)
+
+## 17. Karena pengunjung pada /var/www/penanjakan.semeruyyy.pw/public/images sangat banyak maka semua request gambar yang memiliki substring “semeru” akan diarahkan menuju semeru.jpg.
+- Jalankan ```cd /var/www/penanjakan.semerue08.pw```
+- Buat file baru ```nano .htaccess```
+- Konfigurasi file tersebut seperti gambar di bawah ini
+- ![foto 17a](img/17a.png)
+- Jalankan ```service apache2 restart```
+- Buka http://penanjakan.semerue08.pw/public/images/semeru.jpg di browser
+- ![foto 17b](img/17b.png)
