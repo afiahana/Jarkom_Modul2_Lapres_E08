@@ -1,6 +1,6 @@
 # Jarkom_Modul2_Lapres_E08
 
-## Membuat sebuah website utama dengan alamat http://semeruyyy.pw
+## 1. Membuat sebuah website utama dengan alamat http://semeruyyy.pw
 - Install bind9 di UML Malang ```apt-get install bind9```
 - Buka file ```nano /etc/bind/named.conf.local```
 - Konfigurasi file tersebut seperti gambar di bawah lalu simpan
@@ -16,10 +16,30 @@
 - Berhasil ketika UML Gresik dan/atau Sidoarjo berhasil ping ```ping semerue08.pw```
 - ![foto 1c](img/1c.png)
 
-## Website memiliki alias http://www.semeruyyy.pw
+## 2. Website memiliki alias http://www.semeruyyy.pw
 - Pada UML Malang buka file ```nano /etc/bind/semeru/semerue08.pw```
 - Konfigurasi file tersebut seperti gambar di bawah lalu simpan
 - ![foto 2a](img/2a.png)
 - Jalankan ```service bind9 restart```
-- Berhasil ketika UML Gresik dan Sidoarjo berhasil ping ```ping www.semerue08.pw```
+- Berhasil ketika UML Gresik dan/atau Sidoarjo berhasil ping ```ping www.semerue08.pw```
 - ![foto 2b](img/2b.png)
+
+## 3. Website memiliki subdomain http://penanjakan.semeruyyy.pw yang diatur DNS-nya pada MALANG dan mengarah ke IP Server PROBOLINGGO
+- Pada UML Malang buka file ```nano /etc/bind/semeru/semerue08.pw```
+- Konfigurasi file tersebut seperti gambar di bawah ini lalu simpan
+- ![foto 3a](img/3a.png)
+- Jalankan ```sevice bind9 restart```
+- Berhasil ketika UML Gresik dan/atau Sidoarjo berhasil ping ```ping penanjakan.semerue08.pw```
+- ![foto 3b](img/3b.png)
+
+## 4. Dibuatkan reverse domain untuk domain utama
+- Pada UML Malang buka file ```nano /etc/bind/named.conf.local```
+- Konfigurasi file tersebut seperti gambar di bawah ini lalu simpan
+- ![foto 4a](img/4a.png)
+- Jalankan ```cp /etc/bind/db.local /etc/bind/semeru/71.151.10.in-addr.arpa```
+- Buka file ```nano /etc/bind/semeru/71.151.10.in-addr.arpa```
+- Konfigurasi file tersebut seperti gambar di bawah ini lalu simpan
+- ![foto 4b](img/4b.png)
+- Jalankan ```service bind9 restart```
+- Berhasil ketika UML Gresik dan/atau Sidoarjo berhasil menjalankan ```host -t PTR 10.151.71.74```
+- ![foto 4c](img/4c.png)
