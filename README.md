@@ -68,17 +68,18 @@
 - ![foto 6b](img/6b.png)
 - Pada UML Malang buka file ```nano /etc/bind/named.conf.local```
 - Konfigurasi file tersebut seperti gambar di bawah lalu simpan
+- ![foto 6c](img/6c.png)
 - Jalankan ```service bind9 restart```
 - Pada UML Mojokerto buka file ```nano /etc/bind/named.conf.local```
 - Konfigurasi file tersebut seperti gambar di bawah lalu simpan
-- ![foto 6c](img/6c.png)
+- ![foto 6d](img/6d.png)
 - Buat folder baru ```mkdir /etc/bind/delegasi```
 - Jalankan ```cp /etc/bind/db.local /etc/bind/delegasi/gunung.semerue08.pw```
 - Konfigurasi file tersebut seperti gambar di bawah lalu simpan
-- ![foto 6d](img/6d.png)
+- ![foto 6e](img/6e.png)
 - Jalankan ```service bind9 restart```
 - Berhasil ketika UML Gresik dan/atau Sidoarjo ping ```gunung.semerue08.pw```
-- ![foto 6e](img/6e.png)
+- ![foto 6f](img/6f.png)
 
 ## 7. Meminta dibuatkan subdomain dengan nama http://naik.gunung.semeruyyy.pw , domain ini diarahkan ke IP Server PROBOLINGGO.
 - Pada UML Mojokerto buka file ```nano /etc/bind/delegasi/gunung.semerue08.pw```
