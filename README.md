@@ -42,7 +42,6 @@
 - ![foto 4b](img/4b.png)
 - Jalankan ```service bind9 restart```
 - Berhasil ketika UML Gresik dan/atau Sidoarjo berhasil menjalankan ```host -t PTR 10.151.71.74```
-- ![foto 4c](img/4c.png)
 
 ## 5. Untuk mengantisipasi server dicuri/rusak, Bibah minta dibuatkan DNS Server Slave pada MOJOKERTO agar Bibah tidak terganggu menikmati keindahan Semeru pada Website.
 - Pada UML Malang buka file ```nano /etc/bind/named.conf.local```
@@ -154,6 +153,7 @@
 - ![foto 13a](img/13a.png)
 - Jalankan ```service apache2 restart```
 - ![foto 13b](img/13b.png)
+- ![foto 13c](img/13c.png)
 
 ## 14. Untuk web http://gunung.semeruyyy.pw belum dapat dikonfigurasi pada web server karena menunggu pengerjaan website selesai.sedangkan web http://naik.gunung.semeruyyy.pw sudah bisa diakses hanya dengan menggunakan port 8888. DocumentRoot web berada pada /var/www/naik.gunung.semeruyyy.pw. Dikarenakan web http://naik.gunung.semeruyyy.pw bersifat private
 - Masuk ke directory /var/www dengan menjalankan ```cd /var/www```
